@@ -32,7 +32,7 @@ def parse_args():
 
     parser = argparse.ArgumentParser()
     #params for prediction engine
-    parser.add_argument("--use_gpu", type=str2bool, default=True)
+    parser.add_argument("--use_gpu", type=str2bool, default=False)
     parser.add_argument("--ir_optim", type=str2bool, default=True)
     parser.add_argument("--use_tensorrt", type=str2bool, default=False)
     parser.add_argument("--gpu_mem", type=int, default=8000)
@@ -65,7 +65,7 @@ def parse_args():
         type=str,
         default="./ppocr/utils/ppocr_keys_v1.txt")
     parser.add_argument("--use_space_char", type=bool, default=True)
-    parser.add_argument("--enable_mkldnn", type=bool, default=False)
+    parser.add_argument("--enable_mkldnn", type=bool, default=True)
     return parser.parse_args()
 
 
